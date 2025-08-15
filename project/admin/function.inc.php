@@ -1,0 +1,30 @@
+<?php
+function pr($arr) {
+    echo '<pre>';
+    print_r($arr);
+}
+
+function prx($arr) {
+    echo '<pre>';
+    print_r($arr);
+    die();
+} 
+
+function get_safe_value($con,$str) {
+    if ($str!=''){
+        $str = trim($str);
+        return mysqli_real_escape_string($con,$str);
+    }
+}
+
+function imageCompress($source,$path,$quality=60){
+	$arr=getimagesize($source);
+	if($arr['mime']=="image/png"){
+		$i=imagecreatefrompng($source);
+	}else{
+		$i=imagecreatefromjpeg($source);
+	}
+	imagejpeg($i,$path,$quality);
+}
+
+?>
