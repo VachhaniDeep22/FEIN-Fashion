@@ -1,3 +1,5 @@
-database name : ecom
-admin id: FEIN
+database name : ecom,
+
+admin id: FEIN, 
+
 admin password : feinadmin
